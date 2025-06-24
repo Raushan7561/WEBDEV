@@ -1,0 +1,134 @@
+/*Universal selector*/
+
+* {
+    font-family:'Courier New', Courier, monospace;
+}
+
+/*element selector*/
+
+h3 {
+    color:purple !important; /*importamt use krne se hm baad me kbhi usme changing nhi kr skte*/
+}
+
+h1{
+    color:#b92b27;
+}
+
+/* id selector*/
+
+#loginn{
+    background-color: ghostwhite;
+    color:black;
+}
+
+#signup{
+    background-color: #b92b27;
+}
+
+/* class selector */
+.upvote{
+    background-color: green;
+    color: burlywood;
+
+}
+
+/*descendent selector*/
+p a{
+    color:red;
+    background-color: bisque;
+}
+
+/*lables of desendent selector*/
+
+nav ul li a{
+    color:hotpink;
+   
+}
+
+/* Adjacent Sibling Combinator*/
+
+p+h3{
+    text-decoration: underline;
+}
+
+.upvote+button{
+    background-color: cornflowerblue;
+    color:blue;
+}
+
+/*child Combinator*/
+
+div > input{
+    background-color: salmon;
+    color:rgb(0, 8, 255);
+}
+
+/*Atribute selector*/
+input[type="text"]{
+    color:#b92b27;
+    background-color: ghostwhite;
+}
+
+input[password="password"]{
+    color:green;
+}
+
+/*explore atrribute problem MDN*/
+
+/*practice2*/
+
+/*#myid p{
+    color: brown;
+    background-color: aquamarine;
+}*/
+
+div[id="myid"]{
+     color: brown;
+    background-color: aquamarine;
+}
+
+/*pseudo class: A keyword added
+ to a selector that specifies a 
+ special state of the selected element*/
+
+button:hover{
+    background-color: black;
+    color: aliceblue;
+}
+
+
+/*jb hm kisi bhi button pe click 
+krte hai to uska color change ho 
+jata haii isko use krne se*/
+button:active{  
+        background-color: aquamarine;
+        color:black;
+}
+
+/*radio botton or checkboxes ka 
+colour change ho jata hai
+ usse select krte hi*/
+ input[type="radio"]:checked +lable{
+    color: #b92b27;
+    font-weight: bold;
+ }
+
+ /*nth element ko select krna*/
+ .post:nth-of-type(2n){
+        background-color: antiquewhite;
+ }
+
+ /*explore nth term MDN*/
+
+ /*Pseudo Elements*/
+ h1::first-letter{
+    color: black;
+ }
+
+ p::first-line{
+    color: red;
+ }
+
+ p::selection{
+    color: limegreen;
+ }/*explore in MDN*/
