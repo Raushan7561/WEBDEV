@@ -1,0 +1,10 @@
+h2{
+    display: inline;
+}
+
+span{/* inline ke padding padding margin left and right 
+    or or hght or widht kuch empliment hota hi nhi hai
+    pe empliment hoti hai nh ki top botton*/
+    display: block;
+    display:inline-block;/*it is inline butt behave like a block*/
+}

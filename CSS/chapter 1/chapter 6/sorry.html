@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorry My Love</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ffe6e6 0%, #e6f7ff 100%);
+            color: #333;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-bottom: 2px solid #ffc0cb;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 200%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 20px,
+                #ffb6c1 20px,
+                #ffb6c1 22px
+            );
+            opacity: 0.1;
+            animation: slide 10s linear infinite;
+        }
+        
+        @keyframes slide {
+            0% { left: -50%; }
+            100% { left: 100%; }
+        }
+        
+        h1 {
+            font-size: 3rem;
+            color: #d63384;
+            animation: fadeIn 2s ease-in;
+            position: relative;
+            z-index: 2;
+        }
+        
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .intro {
+            font-size: 1.5rem;
+            margin: 20px auto;
+            max-width: 600px;
+            line-height: 1.6;
+            animation: fadeIn 3s ease-in;
+        }
+        
+        section {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        section h2 {
+            color: #d63384;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .message {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            text-align: center;
+        }
+        
+        .hearts {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        
+        .heart {
+            margin: 10px;
+            font-size: 2rem;
+            color: #ffb6c1;
+            animation: bounce 1.5s ease-in-out infinite;
+        }
+        
+        .heart:nth-child(odd) { animation-delay: 0.5s; }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        
+        .image-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .image-section img:hover {
+            transform: scale(1.05);
+        }
+        
+        .reasons {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        
+        .reasons li {
+            margin: 10px 0;
+            font-size: 1.1rem;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .reasons li::before {
+            content: "♥";
+            position: absolute;
+            left: 0;
+            color: #d63384;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-top: 2px solid #ffc0cb;
+            position: relative;
+        }
+        
+        footer p {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #d63384;
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .intro { font-size: 1.2rem; }
+            section { margin: 30px 20px; padding: 15px; }
+            .heart { font-size: 1.5rem; }
+        }
+      
+    </style>
+</head>
+<body>
+    <header>
+        <h1>I'm Sorry, My Love(BUBU)</h1>
+        <div class = "first image">
+            <img src="C:\Users\91725\OneDrive\Desktop\webdev\CSS\chapter 1\chapter 6\IMG-20240920-WA0017.jpg" alt="parichowk Mac-d"/>
+        <div class="intro">
+            I know I've been arguing too much, and it hurts me to know I've made you hear my frustrations endlessly. This is my way of saying sorry and promising to change.
+        </div>
+        </div>
+    </header>
+    
+    <section>
+        <h2>My Apology</h2>
+        <div class="message">
+            Words can't fully express how sorry I am for the times I've raised my voice or let anger take over. You mean the world to me, and I hate that my outbursts have overshadowed our love. I cherish every moment with you and promise to listen more, speak softer, and love harder.
+        </div>
+        <div class="hearts">
+            <div class="heart">❤</div>
+            <div class="heart">💖</div>
+            <div class="heart">😘</div>
+            <div class="heart">😍</div>
+            <div class="heart">💕</div>
+        </div>
+    </section>
+    
+    <section>
+        <h2>A Memory of Us</h2>
+        <div class="image-section">
+            <img src="Snapchat-1002885308.jpg" alt="Romantic couple holding hands under a starlit sky with fireworks bursting overhead, warm glow illuminating their smiling faces, capturing a moment of pure love and joy in a scenic outdoor setting" />
+        </div>
+        <div class="message">
+            Remember our beautiful times together? Like this moment where we're lost in each other's world. I want to go back to that place and stay there forever.
+        </div>
+    </section>
+    
+    <section>
+        <h2>Why I Love You</h2>
+        <ul class="reasons">
+            <li>Your endless patience that makes me better every day.</li>
+            <li>The way you light up every room you enter.</li>
+            <li>How you always know how to make me smile, even on my worst days.</li>
+            <li>Your kind heart that forgives even when I don't deserve it.</li>
+            <li>Being my rock through every storm we face together.</li>
+        </ul>
+    </section>
+    
+    <section>
+        <h2>My Promise</h2>
+        <div class="message">
+            From now on, I'll work harder to control my temper. Communication will be our strength, not a weakness. Thank you for loving me despite my flaws. I love you more than words can say.
+        </div>
+        <div class="image-section">
+            <img src="WhatsApp Image 2025-07-22 at 01.09.52_a5ef50a0.jpg" alt="Timeless promise symbolized by entwined rings floating above a blooming flower garden at sunrise, with soft pastel colors of pink and gold lighting up the scene, representing everlasting commitment and growth in their relationship" />
+        </div>
+    </section>
+    
+    <footer>
+        <p>Forever Yours, with All My Heart</p>
+    </footer>
+</body>
+</html>
+</content>
+</create_file>
