@@ -2,6 +2,7 @@
 
 // function greeting(){
 //     console.log("Hello Coder Army, Strike is coming on 18 october");
+//     agr hhm return nhi kraa rhe to to wo undefine hoga
 //     return 10;
 // }
 
@@ -101,13 +102,14 @@
 // }
 
 
-// const greeting = ()=> ({ name:"Rohit",age:20});
+// const greeting = ()=> ({ name:"Rohit",age:20});// () use this bcz we arre having error kuki {} iska mtlb ki iske andr return atatenment mendetry hai or () this is for object
 
 
 // console.log(greeting());
 
 
 // IIFE
+//for automatically call (imediatly invoked function)= IIFE
 
 // (function greeting(){
 //     console.log("Helloji");
