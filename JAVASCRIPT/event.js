@@ -1,77 +1,71 @@
-const newElement = document.createElement("h2");
-newElement.textContent = "Strike is coming";
-newElement.id = "second";
+// function handleClick(){
+//     const element = document.getElementById("first");
+//     element.textContent = "Strike is Coming";
+// }
 
 
-// select elemenet
 const element = document.getElementById("first");
-element.after(newElement);
-// element.before(newElement)
+// element.onclick = function handleClick(){
+// //    element.textContent = "Strike is Coming";
+//     element.style.backgroundColor="pink";
+// }
 
-const newElement2 = document.createElement('h3');
-newElement2.textContent = "Diwali aa rahi hai";
-newElement2.id = "third";
-// newElement2.className = "diwali";
-// newElement2.className += " Holi";
-newElement2.classList.add("diwali");
-newElement2.classList.add("holi");
-// newElement2.classList.remove("diwali");
+// element.onclick = function handleClick(){
+//    element.textContent = "I am the best";
+// }
 
-newElement2.style.backgroundColor = "brown";
-newElement2.style.fontSize = "30px";
-newElement2.setAttribute("hello","ji");
+// element.addEventListener('click',()=>{
+//     element.textContent = "Strike is Coming";
+// })
 
+// element.addEventListener('click',()=>{
+//     element.style.backgroundColor="brown";
+// })
 
-element.before(newElement2);
+// const child1 = document.getElementById("child1");
+// child1.addEventListener('click',()=>{
+//     child1.textContent = "I am clicked";
+// })
 
-console.log(newElement2.getAttribute("hello"));
+const parent = document.getElementById("parent");
+// console.log(parent.children);
 
-// before after
-
-
-// const list = document.createElement("li");
-// list.textContent = "Milk"
-// const list2 = document.createElement("li");
-// list2.textContent = "Cake"
-
-// const list3 = document.createElement("li");
-// list3.textContent = "Halwa"
-
-// const list4 = document.createElement("li");
-// list4.textContent = "Paneer"
-
-// const unorderElement = document.getElementById("listing");
-
-// unorderElement.append(list, list2);
-// unorderElement.prepend(list3);
-
-// unorderElement.children[1].after(list4);
-
-const arr = ["Milk", "Halwa", "Paneer","tofu","Tea"];
-
-const unorderElement = document.getElementById("listing");
-const fragment = document.createDocumentFragment();
-// array
-
-for(let food of arr){
-    const list = document.createElement("li");
-    list.textContent = food;
-    fragment.append(list);
+function handleClick(e){
+   e.target.textContent = "I am Clicked";
+   parent.removeEventListener('click',handleClick);
 }
 
-unorderElement.append(fragment);
-
-const s1 = document.getElementById("first");
-s1.remove();
+parent.addEventListener('click',handleClick)
 
 
-const month = document.getElementById("ten");
 
-// console.log(month.children);
-const lister = document.createElement("li");
-lister.textContent = "<img src='https://plus.unsplash.com/premium_photo-1689530775582-83b8abdb5020?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tJTIwcGVyc29ufGVufDB8fDB8fHww&fm=jpg&q=60&w=3000'>";
 
-// lister.innerHTML = "<img src='https://plus.unsplash.com/premium_photo-1689530775582-83b8abdb5020?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tJTIwcGVyc29ufGVufDB8fDB8fHww&fm=jpg&q=60&w=3000'>"
 
-month.prepend(lister);
-// month.insertAdjacentElement("afterend",lister)
+// for(let child of parent.children){
+//     console.log(child);
+//     child.addEventListener('click',()=>{
+//         child.textContent = "I am Clicked";
+//     })
+// }
+
+// const grandparent = document.getElementById("grandparent");
+// grandparent.addEventListener('click',(e)=>{
+//     console.log(e.target);
+//     // console.log("GrandParent is clicked");
+// })
+
+// const parent = document.getElementById("parent");
+// parent.addEventListener('click',(e)=>{
+//     // console.log(e);
+//     // console.log("Parent is clicked");
+// })
+
+// const child = document.getElementById("child");
+// child.addEventListener('click',(e)=>{
+//     // console.log(e);
+//     // e.stopPropagation();
+//     // console.log("child is clicked");
+// })
+
+// capture phase on hai: Top se down aaoge: Us time pe event ko trigger kar diya jaayega
+// capture phase off hai: Event hai usko down to up(Bubbling phase bolte hai, tab trigger kiya jaayega)
